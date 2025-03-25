@@ -1,0 +1,105 @@
+#contact_section {
+    display: flex;
+    justify-content: center; /* Zentriert den Inhalt horizontal */
+    align-items: stretch; /* Streckt die Kinder (Text und Formular) auf die volle Höhe */
+    padding: 50px 10px; /* Reduziert den Abstand oben und unten */
+    background: var(--primary_color); /* Deine angepasste Secondary Color */
+    width: 100vw; /* Nimmt die gesamte Breite ein */
+    height: auto; /* Nimmt die gesamte Höhe des Viewports ein */
+}
+
+.contact_container {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Stellt sicher, dass es die volle Breite nutzt */
+    height: 100%; /* Setzt die Höhe des Containers auf 100% */
+    gap: 20px; /* Reduziert den Abstand zwischen Text und Formular */
+    padding: 0 20px; /* Fügt Padding zum Container hinzu, um den Abstand vom Bildschirmrand zu erhöhen */
+}
+
+.contact_info {
+    flex: 1; /* Nimmt den verbleibenden Platz ein, der nicht vom Formular beansprucht wird */
+    background: #333; /* Leicht abgesetzter Hintergrund für besseren Kontrast */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Zentriert den Inhalt vertikal */
+    height: 100%; /* Nimmt die volle Höhe ein */
+}
+
+.contact_text h1 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contact_text p {
+    color: white;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.contact_formular {
+    flex: 3; /* Nimmt 3/4 der Breite ein */
+    background:var(--secondary_color); /* Hellere Variante der Primary Color */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Zentriert den Inhalt vertikal */
+    height: 100%; /* Nimmt die volle Höhe ein */
+    margin-right: 20px; /* Fügt einen Abstand zum rechten Rand des Containers hinzu */
+}
+
+.contact_formular form {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.contact_formular label {
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contact_formular input,
+.contact_formular textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    background: #2A2A2A;
+    color: white;
+}
+
+.contact_formular button {
+    margin-top: 15px;
+    padding: 10px;
+    background: #FF6B35;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact_formular button:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive Anpassung für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .contact_container {
+        flex-direction: column;
+        gap: 20px; /* Reduziert den Abstand zwischen den Elementen */
+        padding: 0 10px; /* Reduziert das Padding für kleinere Bildschirme */
+    }
+
+    .contact_info, .contact_formular {
+        flex: 1; /* Beide nehmen volle Breite ein */
+    }
+}

@@ -1,0 +1,35 @@
+footer {
+    background-color: var(--secondary_color); /* Setzt den Hintergrund des Footers */
+    padding: 20px 0; /* Fügt oben und unten etwas Abstand hinzu */
+    display: flex;
+    justify-content: center; /* Zentriert den Inhalt horizontal */
+    align-items: center; /* Zentriert den Inhalt vertikal */
+}
+footer p{
+    color:white;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around; /* Verteil die Links gleichmäßig */
+    width: 100%; /* Setzt die Breite des UL auf 100% */
+    max-width: 800px; /* Maximiert die Breite, um zu verhindern, dass der Footer zu breit wird */
+    padding: 0;
+    list-style: none; /* Entfernt die Standard-Aufzählungszeichen */
+    margin: 0;
+}
+
+footer ul li {
+    padding: 0 15px; /* Fügt Abstand zwischen den Listenelementen hinzu */
+}
+
+footer ul li a {
+    color: white; /* Setzt die Farbe der Links */
+    text-decoration: none; /* Entfernt die Unterstreichung von den Links */
+    font-size: 16px; /* Setzt die Schriftgröße */
+    transition: color 0.3s ease; /* Füge eine Übergangsanimation für die Farbe hinzu */
+}
+
+footer ul li a:hover {
+    color: #FF6B35; /* Farbe der Links beim Hover-Effekt */
+}

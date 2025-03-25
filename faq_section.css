@@ -1,0 +1,59 @@
+#faq_section {
+    background-color: var(--primary_color);
+    color:var(--text_color);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+details {
+    background-color:var(--secondary_color); 
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+details summary {
+    font-size: 18px;
+    font-weight: bold;
+    color: white; /* Dunkle Schriftfarbe für die Frage */
+    cursor: pointer;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+details summary:hover {
+    color: #FF6B35; /* Helle Farbe bei Hover */
+}
+
+details p {
+    font-size: 16px;
+    color: #666; /* Graue Schriftfarbe für die Antwort */
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+details[open] {
+    background-color: #FF6B35; /* Farbe beim Öffnen des Details */
+    color: white;
+}
+
+details[open] summary {
+    color: white; /* Weiße Schrift bei geöffnetem Detail */
+}
+
+details[open] p {
+    color: white; /* Weiße Schrift für die Antwort */
+}
+
+/* Responsive Anpassungen für kleinere Bildschirme */
+@media (max-width: 768px) {
+    #faq_section {
+        padding: 30px 10px;
+    }
+
+    details {
+        margin: 10px;
+    }
+}

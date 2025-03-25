@@ -1,0 +1,91 @@
+/* Allgemeine Styles */
+.section_header_2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Damit Überschriften oben bleiben */
+    width: 90%;
+    height: 25vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    padding-top: 1%;
+    background: var(--secondary_color);
+    color: var(--text_color);
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Überschrift und Box zentrieren */
+    flex: 1; /* Alle Boxen nehmen gleich viel Platz ein */
+    max-width: 30%; /* Stellt sicher, dass 3 Boxen nebeneinander bleiben */
+}
+
+h1 {
+    margin-bottom: 10px; /* Abstand zur Box */
+    text-align: center;
+    font-size: 50px;
+}
+
+.content-box {
+    border-radius: 10px;
+    text-align: center;
+    height: 20vh;
+    width: 80%; /* Hält die Breite im Rahmen von max-width */
+}
+
+.content-box img {
+    width: 100%;
+    height: 100%; /* Damit es den gesamten Bereich ausfüllt */
+    object-fit: cover; /* Sorgt dafür, dass das Bild auch wirklich die Box füllt */
+    border-radius: 20px; /* Falls nötig, hier einen höheren Wert testen */
+    overflow: hidden; /* Stellt sicher, dass keine Ecken herausragen */
+    display: block; /* Vermeidet extra Abstände */
+}
+
+/* Responsivität */
+@media (max-width: 1200px) {
+    .content-wrapper {
+        max-width: 45%; /* Bei mittleren Bildschirmen 2 Boxen nebeneinander */
+    }
+
+    h1 {
+        font-size: 40px; /* Schriftgröße etwas verringern */
+    }
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        max-width: 70%; /* Bei kleineren Bildschirmen nur eine Box nebeneinander */
+    }
+
+    h1 {
+        font-size: 30px; /* Schriftgröße weiter verringern */
+    }
+
+    .section_header_2 {
+        flex-direction: column; /* Um den Header für kleine Bildschirme in eine Spalte zu setzen */
+        align-items: flex-start; /* Setzt den Header nach links */
+        height: auto; /* Höhe anpassen */
+        padding-top: 2%; /* Etwas mehr Abstand oben */
+    }
+}
+
+@media (max-width: 480px) {
+    .content-wrapper {
+        max-width: 90%; /* Boxen nehmen fast den gesamten Platz ein */
+    }
+
+    h1 {
+        font-size: 24px; /* Weitere Anpassung der Schriftgröße */
+    }
+
+    .section_header_2 {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .content-box {
+        height: 15vh; /* Höhe der Boxen verringern */
+    }
+}
