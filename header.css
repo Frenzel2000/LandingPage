@@ -1,16 +1,18 @@
-/* Header Styles */
 header {
     display: flex;
-    justify-content: center; /* Zentriert den gesamten Inhalt */
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    height: 5vh;
-    gap: 20px;
+    background-color: var(--primary_color);
     position: sticky;
     top: 0;
-    background: white;
     z-index: 1000;
-    background-color: var(--primary_color);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--accent_color);
 }
 
 .navigation_container {
@@ -18,101 +20,69 @@ header {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; /* Zentriert die Navigationselemente */
-    align-items: center;
-    gap: 6%;
-    font-size: 30px;
-    white-space: nowrap; /* Verhindert Zeilenumbrüche */
-    flex-grow: 1; /* Sorgt dafür, dass die Navigation den Platz nutzt */
+    gap: 40px;
+}
+
+.navigation_container li {
+    display: inline;
 }
 
 .navigation_container a {
     text-decoration: none;
     color: var(--text_color);
+    font-size: 30px;
 }
 
 .navigation_container a:hover {
     color: var(--hover_color);
 }
 
-header p {
-    font-size: 35px;
-    font-weight: bold;
-    color: var(--accent_color);
-}
-
-header button {
+.button_container button {
     border: none;
-    height: 4vh;
-    width: 10vw;
+    padding: 10px 20px;
     border-radius: 30px;
     background-color: var(--accent_color);
-    color: black;
-    font-size: 18px;
-    font-weight: var(--font_weight_bold);
+    color: white;
+    font-size: 16px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s;
 }
 
-header button:hover {
+.button_container button:hover {
     background-color: var(--hover_color);
-    transform: scale(1.05);
 }
 
-/* Responsivität */
-@media (max-width: 1200px) {
-    .navigation_container {
-        font-size: 25px; /* Kleinere Schriftgröße bei mittleren Bildschirmen */
-        gap: 4%; /* Weniger Abstand zwischen den Navigationselementen */
-    }
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
 
-    header button {
-        width: 15vw; /* Button größer für mittlere Bildschirme */
-        height: 5vh;
-    }
-
-    header p {
-        font-size: 30px; /* Kleinere Schriftgröße für den Header */
-    }
+.menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text_color);
+    margin: 5px;
 }
 
 @media (max-width: 768px) {
-    /* Navigation auf mobile Ansicht umstellen */
     .navigation_container {
-        font-size: 20px; /* Weitere Reduzierung der Schriftgröße */
-        gap: 3%; /* Noch weniger Abstand zwischen den Navigationselementen */
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary_color);
+        text-align: center;
+        padding: 10px 0;
     }
 
-    header p {
-        font-size: 25px; /* Weitere Anpassung der Schriftgröße */
+    .navigation_container.active {
+        display: flex;
     }
 
-    header button {
-        width: 20vw; /* Button noch größer für kleinere Bildschirme */
-        height: 6vh;
-        font-size: 16px; /* Kleinere Schrift im Button */
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        flex-direction: column; /* Den Header auf kleine Bildschirme in eine Spalte umstellen */
-        height: auto; /* Die Höhe automatisch anpassen */
-        padding: 10px; /* Weniger Abstand im Header */
-        gap: 10px; /* Weniger Abstand zwischen den Elementen im Header */
-    }
-
-    .navigation_container {
-        flex-direction: column; /* Navigationselemente untereinander anordnen */
-        gap: 10px; /* Etwas mehr Abstand zwischen den Elementen */
-    }
-
-    .navigation_container a {
-        font-size: 18px; /* Kleinere Schriftgröße bei sehr kleinen Bildschirmen */
-    }
-
-    header button {
-        width: 80%; /* Button nimmt mehr Platz ein auf kleinen Bildschirmen */
-        font-size: 14px; /* Button-Schrift weiter verkleinern */
+    .menu-toggle {
+        display: flex;
     }
 }

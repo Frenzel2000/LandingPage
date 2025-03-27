@@ -15,47 +15,51 @@
 </head>
 <body>
     <header>
-        <p>FitLife. Trainiere Smarter</p>
+        <p class="logo">FitLife. Trainiere Smarter</p>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <ul class="navigation_container">
-            <li class="navigation_element"> <a href="">Home</a> </li>
-            <li class="navigation_element"> <a href="">Über uns</a> </li>
-            <li class="navigation_element"> <a href="">FAQ</a> </li>
-            <li class="navigation_element"> <a href="">Kontakt</a> </li>    
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Über uns</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Kontakt</a></li>
         </ul>
         <div class="button_container">
-            <a href=""><button>Registieren/Login</button></a>
+            <button>Registrieren/Login</button>
         </div>
-    </header>    
+    </header>  
     <section id="hero_section">
-            <img src="images/motivation_image.png" alt="Motivation">
+        <img src="images/motivation_image.png" alt="Motivation">
         <div class="text-container">
             <h1>Dein Fitnessziel. Dein Weg. Unser FitLife.</h1>
             <a href="anmelden.html">
                 <button>Starte Jetzt</button>
             </a>
-            
         </div>
     </section>
     <section class="section_header_2">
         <div class="content-wrapper">
             <h1>Workouts</h1>
             <div class="content-box">
-                <img src="images/workout_box_iamge.jpg">
-                <p>Maßgeschneiderte Workouts für dein Fitnesslevel und deine Ziele. Egal, ob du Muskeln aufbauen oder Fett verlieren möchtest – wir haben den richtigen Plan für dich.</p>
+                <img src="images/workout_box_iamge.jpg" alt="Workouts">
+                <p>Maßgeschneiderte Workouts für dein Fitnesslevel und deine Ziele.</p>
             </div>
         </div>
         <div class="content-wrapper">
             <h1>Ernährungspläne</h1>
             <div class="content-box">
-                <img src="images/essen_box_image.jpg">
-                <p>Unsere Ernährungspläne sind perfekt auf deine Ziele abgestimmt. Sei es für Gewichtsreduktion oder Muskelaufbau – wir bieten dir die optimale Ernährung für deinen Erfolg.</p>
+                <img src="images/essen_box_image.jpg" alt="Ernährungspläne">
+                <p>Unsere Ernährungspläne sind perfekt auf deine Ziele abgestimmt.</p>
             </div>
         </div>
         <div class="content-wrapper">
-            <h1>Community Tipps</h1>
+            <h1>Community</h1>
             <div class="content-box">
-                <img src="images/community_box_image.jpg">
-                <p>Profitiere von wertvollen Tipps aus unserer Community. Tausche dich mit Gleichgesinnten aus und hole dir Unterstützung von erfahrenen Trainern.</p>
+                <img src="images/community_box_image.jpg" alt="Community Tipps">
+                <p>Profitiere von wertvollen Tipps aus unserer Community.</p>
             </div>
         </div>
     </section>
@@ -177,3 +181,8 @@
     </footer>
 </body>
 </html>
+<script>
+    function toggleMenu() {
+        document.querySelector(".navigation_container").classList.toggle("active");
+    }
+</script>

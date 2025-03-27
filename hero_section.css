@@ -1,20 +1,21 @@
-/* Hero Section Styles */
 #hero_section {
     background-color: var(--primary_color);
     display: flex;
-    padding: 20px;
-    padding-bottom: 0;
+    flex-direction: row;
+    padding:0;
     gap: 40px;
     height: 50vh;
     overflow: hidden;
+    justify-content: center;
+    align-items: center; /* Bild am unteren Rand des Containers ausrichten */
 }
 
 #hero_section img {
     max-height: 100%;
-    max-width: 70%;
-    object-fit: cover;
+    max-width: 50%;
+    object-fit: contain;
     border-radius: 10px;
-    align-self: flex-end;
+    align-self: flex-end; /* Bild bleibt am unteren Rand */
 }
 
 .text-container {
@@ -22,108 +23,79 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60vw;
+    text-align: center;
+    width: 40vw;
     color: var(--text_color);
+    padding:20px;
 }
 
 .text-container h1 {
-    font-size: 90px;
+    font-size: 60px;
     line-height: 1.2;
 }
 
 #hero_section button {
     border: none;
     border-radius: 30px;
-    height: 120px;
-    width: 360px;
+    padding: 15px 30px;
     background-color: var(--accent_color);
     font-size: 18px;
     font-weight: var(--font_weight_bold);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    margin-top: 40px;
+    margin-top: 20px;
+    color: white;
 }
 
 #hero_section button:hover {
     background-color: var(--hover_color);
     transform: scale(1.05);
-    color: black;
 }
 
-/* Responsivität */
 @media (max-width: 1200px) {
     #hero_section {
-        gap: 20px; /* Weniger Abstand zwischen Text und Bild */
-        height: 60vh; /* Hero-Section etwas höher machen */
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+        align-items: center;
     }
 
     #hero_section img {
-        max-width: 50%; /* Bild nimmt bei mittleren Geräten weniger Platz ein */
+        max-width: 70%;
+        align-self: center; /* Bild in der Mitte zentrieren */
     }
 
     .text-container {
-        width: 70vw; /* Textbereich etwas breiter */
+        width: 80vw;
     }
 
     .text-container h1 {
-        font-size: 70px; /* Schriftgröße des Titels etwas kleiner */
-    }
-
-    #hero_section button {
-        width: 300px; /* Button etwas kleiner */
-        height: 100px;
-        font-size: 16px; /* Kleinere Schriftgröße im Button */
+        font-size: 50px;
     }
 }
 
 @media (max-width: 768px) {
-    #hero_section {
-        flex-direction: column; /* Text und Bild untereinander anordnen */
-        height: 80vh; /* Hero-Section höher machen, um mehr Platz zu bieten */
-    }
-
     #hero_section img {
-        max-width: 80%; /* Bild nimmt mehr Platz ein */
-        align-self: center; /* Bild zentrieren */
-    }
-
-    .text-container {
-        width: 80vw; /* Textbereich nimmt fast den gesamten Bildschirm ein */
-        align-items: center; /* Text zentrieren */
+        max-width: 80%;
     }
 
     .text-container h1 {
-        font-size: 50px; /* Weitere Reduzierung der Schriftgröße */
+        font-size: 40px;
     }
 
     #hero_section button {
-        width: 250px; /* Button noch kleiner */
-        height: 80px;
-        font-size: 14px; /* Button-Schrift weiter verkleinern */
+        padding: 12px 24px;
+        font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
-    #hero_section {
-        height: 70vh; /* Hero-Section an kleine Bildschirme anpassen */
-    }
-
-    #hero_section img {
-        max-width: 90%; /* Bild nimmt fast den gesamten Bereich ein */
-        max-height: 60%; /* Bildhöhe etwas anpassen */
-    }
-
-    .text-container {
-        width: 90vw; /* Textbereich nimmt fast den gesamten Platz ein */
-    }
-
     .text-container h1 {
-        font-size: 35px; /* Schriftgröße weiter reduzieren */
+        font-size: 30px;
     }
 
     #hero_section button {
-        width: 200px; /* Button nimmt weniger Platz ein */
-        height: 60px;
-        font-size: 14px; /* Button-Schrift weiter reduzieren */
+        padding: 10px 20px;
+        font-size: 14px;
     }
 }
