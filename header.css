@@ -82,6 +82,9 @@ header {
 }
 
 @media (max-width: 900px) {
+    header{
+        padding-bottom: 5px;
+    }
     .navigation_container {
         display: none;
         flex-direction: column;
