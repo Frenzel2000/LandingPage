@@ -3,8 +3,7 @@
     display: flex;
     flex-direction: row;
     padding:0;
-    gap: 40px;
-    height: 50vh;
+    height: 55vh;
     overflow: hidden;
     justify-content: center;
     align-items: center; /* Bild am unteren Rand des Containers ausrichten */
@@ -52,17 +51,18 @@
     transform: scale(1.05);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     #hero_section {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        padding-top: 10px;
         height: auto;
-        padding: 40px 20px;
         align-items: center;
     }
 
     #hero_section img {
         max-width: 70%;
         align-self: center; /* Bild in der Mitte zentrieren */
+        justify-content: flex-end;
     }
 
     .text-container {

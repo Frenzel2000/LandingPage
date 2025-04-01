@@ -99,7 +99,7 @@
         padding: 0 10px; /* Reduziert das Padding für kleinere Bildschirme */
     }
 
-    .contact_info, .contact_formular {
-        flex: 1; /* Beide nehmen volle Breite ein */
+    .contact_formular{
+        width: 80%;
     }
 }

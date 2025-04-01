@@ -3,12 +3,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center; /* Damit Überschriften oben bleiben */
-    width: 90%;
-    height: 25vh;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 5%;
-    padding-top: 1%;
+    width: 100%;
+    height: 35vh;
+    padding-bottom: 2%;
     background: var(--secondary_color);
     color: var(--text_color);
 }
@@ -17,8 +14,9 @@
     display: flex;
     flex-direction: column;
     align-items: center; /* Überschrift und Box zentrieren */
-    flex: 1; /* Alle Boxen nehmen gleich viel Platz ein */
-    max-width: 30%; /* Stellt sicher, dass 3 Boxen nebeneinander bleiben */
+    flex-grow: 1; /* Wrapper nimmt den gesamten verfügbaren Platz ein */
+    width: 100%; /* Passt die Breite an den verfügbaren Raum an */
+    max-width: 90%; /* Verhindert, dass es zu groß wird */
 }
 
 h1 {
@@ -45,47 +43,76 @@ h1 {
 
 /* Responsivität */
 @media (max-width: 1200px) {
+    .section_header_2 {
+        height: auto; /* Höhe automatisch an den Inhalt anpassen */
+        flex-direction: column; /* Wenn gewünscht, stelle sicher, dass die Elemente gestapelt werden */
+    }
     .content-wrapper {
-        max-width: 45%; /* Bei mittleren Bildschirmen 2 Boxen nebeneinander */
+        width: 100%; /* Wrapper nimmt nun 100% des verfügbaren Raums ein */
+        max-width: none; /* Keine Begrenzung mehr */
+        margin-bottom: 60px;
     }
 
     h1 {
-        font-size: 40px; /* Schriftgröße etwas verringern */
+        margin-top: 20px;
+        font-size: 50px; /* Schriftgröße weiter verringern */
+    }
+
+    .section_header_2 {
+        flex-direction: column; /* Um den Header für kleine Bildschirme in eine Spalte zu setzen */
+        align-items: center; /* Boxen zentrieren */
+        height: auto; /* Höhe anpassen */
+        padding-top: 2%; /* Etwas mehr Abstand oben */
+    }
+    .section_header_2 p{
+        font-size: 25px;
     }
 }
 
 @media (max-width: 768px) {
+    .section_header_2 {
+        height: auto; /* Höhe automatisch an den Inhalt anpassen */
+        flex-direction: column; /* Wenn gewünscht, stelle sicher, dass die Elemente gestapelt werden */
+    }
     .content-wrapper {
-        max-width: 70%; /* Bei kleineren Bildschirmen nur eine Box nebeneinander */
+        width: 100%; /* Wrapper nimmt nun 100% des verfügbaren Raums ein */
+        max-width: none; /* Keine Begrenzung mehr */
+        margin-bottom: 60px;
     }
 
     h1 {
+        margin-top: 30px;
         font-size: 30px; /* Schriftgröße weiter verringern */
     }
 
     .section_header_2 {
         flex-direction: column; /* Um den Header für kleine Bildschirme in eine Spalte zu setzen */
-        align-items: flex-start; /* Setzt den Header nach links */
+        align-items: center; /* Boxen zentrieren */
         height: auto; /* Höhe anpassen */
         padding-top: 2%; /* Etwas mehr Abstand oben */
     }
 }
 
 @media (max-width: 480px) {
+    .section_header_2 {
+        height: auto; /* Höhe automatisch an den Inhalt anpassen */
+        flex-direction: column; /* Wenn gewünscht, stelle sicher, dass die Elemente gestapelt werden */
+    }
     .content-wrapper {
-        max-width: 90%; /* Boxen nehmen fast den gesamten Platz ein */
+        width: 100%; /* Wrapper nimmt nun 100% des verfügbaren Raums ein */
+        max-width: none; /* Keine Begrenzung mehr */
+        margin-bottom: 80px;
     }
 
     h1 {
-        font-size: 24px; /* Weitere Anpassung der Schriftgröße */
+        margin-top: 30px;
+        font-size: 30px; /* Schriftgröße weiter verringern */
     }
 
     .section_header_2 {
-        padding-left: 2%;
-        padding-right: 2%;
-    }
-
-    .content-box {
-        height: 15vh; /* Höhe der Boxen verringern */
+        flex-direction: column; /* Um den Header für kleine Bildschirme in eine Spalte zu setzen */
+        align-items: center; /* Boxen zentrieren */
+        height: auto; /* Höhe anpassen */
+        padding-top: 2%; /* Etwas mehr Abstand oben */
     }
 }

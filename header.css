@@ -2,7 +2,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding:0;
+    padding-left: 40px;
+    padding-right: 40px;
     background-color: var(--primary_color);
     position: sticky;
     top: 0;
@@ -13,6 +15,10 @@ header {
     font-size: 30px;
     font-weight: bold;
     color: var(--accent_color);
+}
+.div_logo{
+    display:flex;
+    justify-content: flex-start;
 }
 
 .navigation_container {
@@ -65,7 +71,17 @@ header {
     margin: 5px;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 1200px)
+{
+    #sub_logo{
+        display:none;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@media (max-width: 900px) {
     .navigation_container {
         display: none;
         flex-direction: column;
